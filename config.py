@@ -51,6 +51,10 @@ for method_name in config['payment_methods']:
         method_config['name'] = "clightning"
         check_set_node_conf("clightning_rpc_file", None, method_config)
 
+    elif method_name == "xpub":
+        method_config['name'] = "xpub"
+        check_set_node_conf("xpub", None, method_config)
+
     else:
         Exception("Unknown payment method: {}".format(method_name))
 
